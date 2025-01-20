@@ -1,0 +1,268 @@
+2025-01-08 20:03:39,497 - INFO - {
+    "robot_id": "robot_1",
+    "plan": [
+        {
+            "step": 1,
+            "action": "navigate_to",
+            "target": [
+                "prepare_station"
+            ],
+            "state": "empty",
+            "condition": null,
+            "details": null
+        },
+        {
+            "step": 2,
+            "action": "pick",
+            "target": [
+                "basket_1"
+            ],
+            "state": "holding basket_1",
+            "condition": null,
+            "details": null
+        },
+        {
+            "step": 3,
+            "action": "navigate_to",
+            "target": [
+                "stem_1"
+            ],
+            "state": "holding basket_1",
+            "condition": null,
+            "details": null
+        },
+        {
+            "step": 4,
+            "action": "place",
+            "target": [
+                "basket_1",
+                "cargo"
+            ],
+            "state": "empty",
+            "condition": null,
+            "details": null
+        },
+        {
+            "step": 5,
+            "action": "scan_tomatoes",
+            "target": [
+                "stem_1"
+            ],
+            "state": "empty",
+            "condition": null,
+            "details": null
+        },
+        {
+            "step": 6,
+            "action": "for_each",
+            "target": [
+                "ripe_tomato"
+            ],
+            "state": "empty",
+            "condition": null,
+            "details": [
+                {
+                    "step": 7,
+                    "action": "harvest_tomato",
+                    "target": [
+                        "ripe_tomato"
+                    ],
+                    "state": "holding ripe_tomato",
+                    "condition": null,
+                    "details": null
+                },
+                {
+                    "step": 8,
+                    "action": "detect_rottenness",
+                    "target": [
+                        "ripe_tomato"
+                    ],
+                    "state": "holding ripe_tomato",
+                    "condition": null,
+                    "details": null
+                },
+                {
+                    "step": 9,
+                    "action": "if",
+                    "target": [
+                        "ripe_tomato"
+                    ],
+                    "state": "holding ripe_tomato",
+                    "condition": "is rotten",
+                    "details": [
+                        {
+                            "step": 10,
+                            "action": "place",
+                            "target": [
+                                "ripe_tomato",
+                                "basket_1.left"
+                            ],
+                            "state": "empty",
+                            "condition": null,
+                            "details": null
+                        }
+                    ]
+                },
+                {
+                    "step": 11,
+                    "action": "if",
+                    "target": [
+                        "ripe_tomato"
+                    ],
+                    "state": "holding ripe_tomato",
+                    "condition": "is not rotten",
+                    "details": [
+                        {
+                            "step": 12,
+                            "action": "place",
+                            "target": [
+                                "ripe_tomato",
+                                "basket_1.right"
+                            ],
+                            "state": "empty",
+                            "condition": null,
+                            "details": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "step": 13,
+            "action": "navigate_to",
+            "target": [
+                "stem_2"
+            ],
+            "state": "empty",
+            "condition": null,
+            "details": null
+        },
+        {
+            "step": 14,
+            "action": "scan_tomatoes",
+            "target": [
+                "stem_2"
+            ],
+            "state": "empty",
+            "condition": null,
+            "details": null
+        },
+        {
+            "step": 15,
+            "action": "for_each",
+            "target": [
+                "ripe_tomato"
+            ],
+            "state": "empty",
+            "condition": null,
+            "details": [
+                {
+                    "step": 16,
+                    "action": "harvest_tomato",
+                    "target": [
+                        "ripe_tomato"
+                    ],
+                    "state": "holding ripe_tomato",
+                    "condition": null,
+                    "details": null
+                },
+                {
+                    "step": 17,
+                    "action": "detect_rottenness",
+                    "target": [
+                        "ripe_tomato"
+                    ],
+                    "state": "holding ripe_tomato",
+                    "condition": null,
+                    "details": null
+                },
+                {
+                    "step": 18,
+                    "action": "if",
+                    "target": [
+                        "ripe_tomato"
+                    ],
+                    "state": "holding ripe_tomato",
+                    "condition": "is rotten",
+                    "details": [
+                        {
+                            "step": 19,
+                            "action": "place",
+                            "target": [
+                                "ripe_tomato",
+                                "basket_1.left"
+                            ],
+                            "state": "empty",
+                            "condition": null,
+                            "details": null
+                        }
+                    ]
+                },
+                {
+                    "step": 20,
+                    "action": "if",
+                    "target": [
+                        "ripe_tomato"
+                    ],
+                    "state": "holding ripe_tomato",
+                    "condition": "is not rotten",
+                    "details": [
+                        {
+                            "step": 21,
+                            "action": "place",
+                            "target": [
+                                "ripe_tomato",
+                                "basket_1.right"
+                            ],
+                            "state": "empty",
+                            "condition": null,
+                            "details": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "step": 22,
+            "action": "navigate_to",
+            "target": [
+                "prepare_station"
+            ],
+            "state": "empty",
+            "condition": null,
+            "details": null
+        },
+        {
+            "step": 23,
+            "action": "pick",
+            "target": [
+                "basket_1"
+            ],
+            "state": "holding basket_1",
+            "condition": null,
+            "details": null
+        },
+        {
+            "step": 24,
+            "action": "navigate_to",
+            "target": [
+                "dock_station"
+            ],
+            "state": "holding basket_1",
+            "condition": null,
+            "details": null
+        },
+        {
+            "step": 25,
+            "action": "place",
+            "target": [
+                "basket_1",
+                "prepare_station"
+            ],
+            "state": "empty",
+            "condition": null,
+            "details": null
+        }
+    ]
+}
+2025-01-08 20:03:39,497 - INFO - set()

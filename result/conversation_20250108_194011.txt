@@ -1,0 +1,35 @@
+2025-01-08 19:40:11,912 - INFO - {
+    "robot_id": "robot_1",
+    "plan": [
+        "1. navigate_to: prepare_station | null",
+        "2. pick basket_1 | basket_1",
+        "3. navigate_to: stem_1 | basket_1",
+        "4. place basket_1 on cargo | null",
+        "5. scan_tomatoes | null",
+        "6. For each tomato in stem_1:",
+        "  6.1. detect_ripeness | null",
+        "  If ripe:",
+        "    6.2. harvest_tomato | tomato",
+        "    6.3. detect_rottenness | tomato",
+        "    If rotten:",
+        "      6.4. place tomato on basket_1.left | null",
+        "    Else:",
+        "      6.5. place tomato on basket_1.right | null",
+        "7. navigate_to: stem_2 | null",
+        "8. scan_tomatoes | null",
+        "9. For each tomato in stem_2:",
+        "  9.1. detect_ripeness | null",
+        "  If ripe:",
+        "    9.2. harvest_tomato | tomato",
+        "    9.3. detect_rottenness | tomato",
+        "    If rotten:",
+        "      9.4. place tomato on basket_1.left | null",
+        "    Else:",
+        "      9.5. place tomato on basket_1.right | null",
+        "10. navigate_to: prepare_station | null",
+        "11. pick basket_1 | basket_1",
+        "12. navigate_to: dock_station | basket_1",
+        "13. place basket_1 on dock_station | null"
+    ]
+}
+2025-01-08 19:40:11,912 - INFO - ['1. detect_ripeness', '2. harvest_tomato', '3. detect_rottenness', '4. place tomato on basket_1.left', '5. place tomato on basket_1.right', 'navigate_to: dock_station', 'navigate_to: prepare_station', 'navigate_to: stem_1', 'navigate_to: stem_2', 'pick basket_1', 'place basket_1 on cargo', 'place basket_1 on dock_station', 'scan_tomatoes']

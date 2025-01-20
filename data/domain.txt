@@ -1,0 +1,6 @@
+1. Tomatoes are initially unknown and must be discovered by scanning stems.
+2. Unripe tomatoes should not be harvested.
+3. Rottenness of the fruit must be scanned just after harvesting.
+4. Robots must use a basket to collect tomatoes.
+5. Robots must place the basket on the cargo before harvesting.
+6. Robots and baskets must return to their initial locations after harvesting.

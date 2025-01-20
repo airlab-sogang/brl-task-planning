@@ -1,0 +1,32 @@
+2025-01-08 19:15:10,034 - INFO - {
+    "robot_id": "robot_1",
+    "plan": [
+        "1. navigate_to: prepare_station | null",
+        "2. pick basket_1 | basket_1",
+        "3. navigate_to: stem_1 | basket_1",
+        "4. place basket_1 on cargo | null",
+        "5. scan_tomatoes | null",
+        "6. For each detected tomato:",
+        "  6.1. If tomato is ripe:",
+        "    6.1.1. harvest_tomato | tomato",
+        "    6.1.2. detect_rottenness | tomato",
+        "    6.1.3. If tomato is rotten:",
+        "      6.1.3.1. place tomato in basket_1.left | null",
+        "    6.1.4. If tomato is not rotten:",
+        "      6.1.4.1. place tomato in basket_1.right | null",
+        "7. navigate_to: stem_2 | null",
+        "8. scan_tomatoes | null",
+        "9. For each detected tomato:",
+        "  9.1. If tomato is ripe:",
+        "    9.1.1. harvest_tomato | tomato",
+        "    9.1.2. detect_rottenness | tomato",
+        "    9.1.3. If tomato is rotten:",
+        "      9.1.3.1. place tomato in basket_1.left | null",
+        "    9.1.4. If tomato is not rotten:",
+        "      9.1.4.1. place tomato in basket_1.right | null",
+        "10. navigate_to: prepare_station | null",
+        "11. pick basket_1 | basket_1",
+        "12. navigate_to: dock_station | basket_1",
+        "13. place basket_1 on dock_station | null"
+    ]
+}

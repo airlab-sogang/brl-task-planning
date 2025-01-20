@@ -1,0 +1,35 @@
+2025-01-08 19:39:44,755 - INFO - {
+    "robot_id": "robot_1",
+    "plan": [
+        "1. navigate_to: prepare_station | null",
+        "2. pick basket_1 | basket_1",
+        "3. navigate_to: stem_1 | basket_1",
+        "4. place basket_1 on cargo | null",
+        "5. scan_tomatoes | null",
+        "For each tomato in stem_1:",
+        "  6. detect_ripeness | null",
+        "  If ripe:",
+        "    7. harvest_tomato | tomato",
+        "    8. detect_rottenness | tomato",
+        "    If rotten:",
+        "      9. place tomato on basket_1.left | null",
+        "    Else:",
+        "      10. place tomato on basket_1.right | null",
+        "11. navigate_to: stem_2 | null",
+        "12. scan_tomatoes | null",
+        "For each tomato in stem_2:",
+        "  13. detect_ripeness | null",
+        "  If ripe:",
+        "    14. harvest_tomato | tomato",
+        "    15. detect_rottenness | tomato",
+        "    If rotten:",
+        "      16. place tomato on basket_1.left | null",
+        "    Else:",
+        "      17. place tomato on basket_1.right | null",
+        "18. pick basket_1 | basket_1",
+        "19. navigate_to: prepare_station | basket_1",
+        "20. place basket_1 on prepare_station | null",
+        "21. navigate_to: dock_station | null"
+    ]
+}
+2025-01-08 19:39:44,755 - INFO - set()

@@ -1,0 +1,19 @@
+{
+  "robot_1": {
+    "id": "robot_1",
+    "description": "A mobile robot equipped with a manipulator featuring a two-finger gripper and a camera. Capable of navigating, scanning, harvesting, and sorting tomatoes. The robot has a dedicated area to place the basket.",
+    "current_location": "dock_station",
+    "action_set": [
+      "navigate_to: navigate to the target location",
+      "scan_tomatoes: scan tomatoes in a stem, hand must be empty",
+      "detect_ripeness: detect ripeness of the tomato, hand must be empty",
+      "detect_rottenness: detect rottenness of the tomato, hand must hold the tomato",
+      "harvest_tomato: harvest the target tomato, hand must be empty",
+      "pick A: hold the object, hand must be empty before pick",
+      "place A on B: place the object on the location, hand must hold the object before placing"
+    ],
+    "status": "idle",
+    "contents": [],
+    "now_holding": false
+  }
+}
