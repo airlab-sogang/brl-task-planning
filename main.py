@@ -21,5 +21,8 @@ def main():
     output = planner.offline_planning(instruction=instruction)
 
 
+def hello():
+    print("hi")
+
 if __name__ == '__main__':
     main()
