@@ -1,0 +1,15 @@
+### Task Input ###
+Task: {task}
+
+Domain Knowledge: {domain_knowledge}
+
+Environment text: {env_text}
+
+Environment json: {env_json}
+
+### Goal ###
+Generate an optimized plan for the given task using the available robots and environment. Use Chain of Thought reasoning
+to explain your planning process, then provide the final plan in the specified format.
+
+### Output Format ###
+{output_format}

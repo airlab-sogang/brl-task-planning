@@ -1,0 +1,298 @@
+{
+    "robots": {
+        "task_domain": "tomato_farm",
+        "robot1": {
+            "name": "mobile-ur5",
+            "mobile-robot": {
+                "model": "Summit",
+                "feature": {
+                    "joint": {
+                        "wheel1": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "base",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        },
+                        "wheel2": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "base",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        },
+                        "wheel3": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "base",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        },
+                        "wheel4": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "base",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        }
+                    },
+                    "weight": 20,
+                    "payload": 50,
+                    "max_vel": 10,
+                    "max_force": 10,
+                    "link": {
+                        "manipulator1": {
+                            "model": "UR5",
+                            "coordinates": []
+                        },
+                        "manipulator2": {
+                            "model": "UR5",
+                            "coordinates": []
+                        }
+                    }
+                }
+            },
+            "manipulator-robot": {
+                "model": "UR5",
+                "feature": {
+                    "joint": {
+                        "joint1": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "base",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        },
+                        "joint2": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "link1",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        },
+                        "joint3": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "lnik2",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        },
+                        "joint4": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "lnik3",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        },
+                        "joint5": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "lnik4",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        },
+                        "joint6": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "lnik5",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        },
+                        "joint7": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "lnik6",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        }
+                    },
+                    "weight": 10,
+                    "payload": 8,
+                    "link": {
+                        "mobile1": {
+                            "model": "Summit",
+                            "coordinates": []
+                        }
+                    }
+                },
+                "gripper": {
+                    "model": "handmade gripper",
+                    "description": "for tomato harvest"
+                }
+            },
+            "atomic_actions": [
+                {
+                    "navigate_to": {
+                        "description": "navigate to the target location",
+                        "robot": ["mobile-robot"],
+                        "sensor": ["camera1", "camera2"],
+                        "params": ["robot_id", "room_id"],
+                        "precondition": ["not working", "base_pose"],
+                        "effect": ["current_location=target_location"]
+                    }
+                },
+                {
+                    "scan_tomatoes": {
+                        "description": "scan tomatoes in a stem and detect ripeness of the tomatoes, hand must be empty",
+                        "robot": ["mobile-robot"],
+                        "sensor": ["camera1", "camera2"],
+                        "params": ["robot_id"],
+                        "precondition": ["base_pose", "current_location.room.type='stem'", "now_holding=false"],
+                        "effect": ["update tomato_buffer", "now_holding=false", "base_pose"]
+                    }
+                },
+                {
+                    "detect_rottenness": {
+                        "description": "detect rottenness of the tomato, hand must hold the tomato",
+                        "robot": ["mobile-robot"],
+                        "params": ["robot_id", "target_pose"],
+                        "precondition": ["not working", "base_pose"],
+                        "effect": ["current_location=target_location"]
+                    }
+                },
+                {
+                    "harvest_tomato": {
+                        "description": "harvest the target tomato, hand must be empty",
+                        "robot": ["mobile-robot"],
+                        "params": ["robot_id", "target_pose"],
+                        "precondition": ["not working", "base_pose"],
+                        "effect": ["current_location=target_location"]
+                    }
+                },
+                {
+                    "pick A": {
+                        "description": "hold the object, hand must be empty before pick",
+                        "robot": ["mobile-robot"],
+                        "params": ["robot_id", "target_pose"],
+                        "precondition": ["not working", "base_pose"],
+                        "effect": ["current_location=target_location"]
+                    }
+                },
+                {
+                    "place A on B": {
+                        "description": "place the object on the location, hand must hold the object before placing",
+                        "robot": ["mobile-robot"],
+                        "params": ["robot_id", "target_pose"],
+                        "precondition": ["not working", "base_pose"],
+                        "effect": ["current_location=target_location"]
+                    }
+                }
+            ],
+            "state": {
+                "contents": [],
+                "now_holding": false,
+                "status": "idle",
+                "base_pose": true,
+                "charge": 100,
+                "end_effector": ["mani1_end_effctor"],
+                "current_location": {
+                    "floor": "farm",
+                    "room": "prepare_station",
+                    "local": ["mobile_coordinate"]
+                },
+                "current_pose": {
+                "mani1_end_effctor": [],
+                "mobile_coordinate": [],
+                "wheel_state": []
+                },
+                "mani_on": false,
+                "wheel_moving": false,
+                "harvesting": false,
+                "scanning": false,
+                "working": ["mani_on", "wheel_moving", "harvesting", "scanning"]
+            },
+            "sensors": {
+                "camera1": {
+                    "model": "realsense RGB",
+                    "loc": "base",
+                    "intrinsic": [],
+                    "extrinsic": {
+                        "base": []
+                    }
+                },
+                "camera2": {
+                    "model": "realsense RGB",
+                    "loc": "hand",
+                    "intrinsic": [],
+                    "extrinsic": {
+                        "hand": []
+                    }
+                },
+                "tactile1": {
+                    "model": "",
+                    "loc": "hand",
+                    "extrinsic": {
+                        "hand": []
+                    }
+                }
+            }
+        },
+        "robot2" :{}
+    }
+}

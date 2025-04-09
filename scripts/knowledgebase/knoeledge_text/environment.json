@@ -1,0 +1,33 @@
+{
+  "location": {
+    "dock_station": {
+      "description": "Starting point for all robots.",
+      "to_edge": ["prepare_station"]
+    },
+    "prepare_station": {
+      "description": "Station with baskets for sorting tomatoes.",
+      "to_edge": ["dock_station", "stem_1", "stem_2"]
+    },
+    "stem_1": {
+      "description": "A tomato stem produces multiple tomatoes.",
+      "to_edge": ["prepare_station", "stem_2"]
+    },
+    "stem_2": {
+      "description": "A tomato stem produces multiple tomatoes.",
+      "to_edge": ["prepare_station", "stem_1"]
+    }
+  },
+  "objects": {
+    "1": {
+      "id": "basket_1",
+      "type": "basket",
+      "current_location": "prepare_station",
+      "compartments": {
+        "left": [],
+        "right": []
+      },
+      "status": "idle",
+      "carrier": false
+    }
+  }
+}

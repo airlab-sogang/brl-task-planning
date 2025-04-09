@@ -1,0 +1,1 @@
+# publish knowledge for each node

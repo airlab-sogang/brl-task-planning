@@ -1,0 +1,9 @@
+{
+    "user": {
+        "name": "Changmin",
+        "age": 60,
+        "expert": false,
+        "note": {},
+        "preference": {}
+    }
+}

@@ -1,0 +1,458 @@
+{
+    "domain_name": "tomato_farm",
+    "env": {
+        "map": {
+            "hierarchy_0":["farm"],
+            "hierarchy_1": ["base_station", "stem1", "stem2", "stem3", "dock_station"],
+            "hierarchy_2": ["basket1", "basket2", "tomato1", "...", "tomatoN", "table1"],
+            "current_graph": {
+                "farm":{
+                    "type": "floor",
+                    "childeren": [
+                        {"base_station": {
+                            "type": "room",
+                            "children": [
+                                {"basket1": {
+                                    "type": "object",
+                                    "children": [],
+                                    "adjacency":["basket2"],
+                                    "world_coordinates": ["x, y, z"],
+                                    "picked": true,
+                                    "ripe": false,
+                                    "rotten": false,
+                                    "harvested": false
+                                }},
+                                {"basket2": {
+                                    "type": "object",
+                                    "children": [],
+                                    "adjacency":["basket1"],
+                                    "world_coordinates": ["x, y, z"],
+                                    "picked": true,
+                                    "ripe": false,
+                                    "rotten": false,
+                                    "harvested": false
+                                }}
+                            ],
+                            "adjacency":["stem1", "dock_station"],
+                            "world_coordinates": ["x, y, z"]
+                        }},
+                        {"stem1": {                            
+                            "type": "room",
+                            "children": [
+                                {"tomato1": {
+                                    "type": "object",
+                                    "children": [],
+                                    "adjacency":["tomato2", "tomato3"],
+                                    "world_coordinates": ["x, y, z"],
+                                    "picked": false,
+                                    "ripe": true,
+                                    "rotten": true,
+                                    "harvested": false
+                                }},
+                                {"tomato2": {
+                                    "type": "object",
+                                    "children": [],
+                                    "adjacency":["tomato1", "tomato3"],
+                                    "world_coordinates": ["x, y, z"],
+                                    "picked": true,
+                                    "ripe": false,
+                                    "rotten": false,
+                                    "harvested": false
+                                }},
+                                {"tomato3": {
+                                    "type": "object",
+                                    "children": [],
+                                    "adjacency":["tomato1", "tomato2"],
+                                    "world_coordinates": ["x, y, z"],
+                                    "picked": true,
+                                    "ripe": true,
+                                    "rotten": false,
+                                    "harvested": false
+                                }}
+                            ],
+                            "adjacency":["base_station", "stem2"],
+                            "world_coordinates": ["x, y, z"]
+                        }},
+                        {"stem2": {                            
+                            "type": "room",
+                            "children": ["생략"],
+                            "adjacency":["stem1", "stem3"],
+                            "world_coordinates": ["x, y, z"]
+                        }},
+                        {"stem3": {
+                            "type": "room",
+                            "children": ["생략"],
+                            "adjacency":["stem2", "dock_station", "base_station"],
+                            "world_coordinates": ["x, y, z"]
+                        }}
+                    ],
+                    "adjacency": ["None"],
+                    "world_coordinates": ["x, y, z"]
+                }
+            },
+            "object_type": [
+                    "basket",
+                    "tomato",
+                    "facilities"
+            ],
+            "room_type": [
+                "station",
+                "stem"
+            ]
+            
+        }
+    },
+    "robots": {
+        "robot1": {
+            "name": "mobile-ur5",
+            "mobile-robot": {
+                "model": "Summit",
+                "feature": {
+                    "joint": {
+                        "wheel1": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "base",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        },
+                        "wheel2": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "base",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        },
+                        "wheel3": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "base",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        },
+                        "wheel4": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "base",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        }
+                    },
+                    "weight": 20,
+                    "payload": 50,
+                    "max_vel": 10,
+                    "max_force": 10,
+                    "link": {
+                        "manipulator1": {
+                            "model": "UR5",
+                            "coordinates": []
+                        },
+                        "manipulator2": {
+                            "model": "UR5",
+                            "coordinates": []
+                        }
+                    }
+                }
+            },
+            "manipulator-robot": {
+                "model": "UR5",
+                "feature": {
+                    "joint": {
+                        "joint1": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "base",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        },
+                        "joint2": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "link1",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        },
+                        "joint3": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "lnik2",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        },
+                        "joint4": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "lnik3",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        },
+                        "joint5": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "lnik4",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        },
+                        "joint6": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "lnik5",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        },
+                        "joint7": {
+                            "type": "REVOLUTE",
+                            "angle": 0,
+                            "angleLowerLimit": 0,
+                            "angleUpperLimit": 360,
+                            "max_vel": 100,
+                            "max_force": 100,
+                            "damping": 1,
+                            "friction": 0,
+                            "parent_link": "lnik6",
+                            "parentFramePos": ["x", "y", "z"],
+                            "parentFrameOri": ["w", "x", "y", "z"]
+                        }
+                    },
+                    "weight": 10,
+                    "payload": 8,
+                    "link": {
+                        "mobile1": {
+                            "model": "Summit",
+                            "coordinates": []
+                        }
+                    }
+                },
+                "gripper": {
+                    "model": "handmade gripper",
+                    "description": "for tomato harvest"
+                }
+            },
+            "atomic_actions": [
+                {
+                    "navigate_to": {
+                        "description": "navigate to the target location",
+                        "robot": ["mobile-robot"],
+                        "sensor": ["camera1", "camera2"],
+                        "params": ["robot_id", "room_id"],
+                        "precondition": ["not working", "base_pose"],
+                        "effect": ["current_location=target_location"],
+                        "constraints": [3],
+                        "task_rules": false
+                    }
+                },
+                {
+                    "scan_tomatoes": {
+                        "description": "scan tomatoes in a stem and detect ripeness of the tomatoes, hand must be empty",
+                        "robot": ["mobile-robot"],
+                        "sensor": ["camera1", "camera2"],
+                        "params": ["robot_id"],
+                        "precondition": ["base_pose", "current_location.room.type='stem'", "now_holding=false"],
+                        "effect": ["update tomato_buffer", "now_holding=false", "base_pose"],
+                        "constraints": false,
+                        "task_rules": [1]
+                    }
+                },
+                {
+                    "detect_rottenness": {
+                        "description": "detect rottenness of the tomato, hand must hold the tomato",
+                        "robot": ["mobile-robot"],
+                        "params": ["robot_id", "target_pose"],
+                        "precondition": ["not working", "base_pose"],
+                        "effect": ["current_location=target_location"]
+                    }
+                },
+                {
+                    "harvest_tomato": {
+                        "description": "harvest the target tomato, hand must be empty",
+                        "robot": ["mobile-robot"],
+                        "params": ["robot_id", "target_pose"],
+                        "precondition": ["not working", "base_pose"],
+                        "effect": ["current_location=target_location"]
+                    }
+                },
+                {
+                    "pick A": {
+                        "description": "hold the object, hand must be empty before pick",
+                        "robot": ["mobile-robot"],
+                        "params": ["robot_id", "target_pose"],
+                        "precondition": ["not working", "base_pose"],
+                        "effect": ["current_location=target_location"]
+                    }
+                },
+                {
+                    "place A on B": {
+                        "description": "place the object on the location, hand must hold the object before placing",
+                        "robot": ["mobile-robot"],
+                        "params": ["robot_id", "target_pose"],
+                        "precondition": ["not working", "base_pose"],
+                        "effect": ["current_location=target_location"]
+                    }
+                }
+            ],
+            "state": {
+                "contents": [],
+                "now_holding": false,
+                "status": "idle",
+                "base_pose": true,
+                "charge": 100,
+                "end_effector": ["mani1_end_effctor", "mani2_end_effctor"],
+                "current_location": {
+                    "floor": "farm",
+                    "room": "prepare_station",
+                    "local": ["mobile_coordinate"]
+                },
+                "current_pose": {
+                "mani1_end_effctor": [],
+                "mani2_end_effctor": [],
+                "mobile_coordinate": [],
+                "wheel_state": []
+                },
+                "mani_on": false,
+                "wheel_moving": false,
+                "harvesting": false,
+                "scanning": false,
+                "working": ["mani_on", "wheel_moving", "harvesting", "scanning"]
+            },
+            "sensors": {
+                "camera1": {
+                    "model": "realsense RGB",
+                    "loc": "base",
+                    "intrinsic": [],
+                    "extrinsic": {
+                        "base": []
+                    }
+                },
+                "camera2": {
+                    "model": "realsense RGB",
+                    "loc": "hand",
+                    "intrinsic": [],
+                    "extrinsic": {
+                        "hand": []
+                    }
+                },
+                "tactile1": {
+                    "model": "",
+                    "loc": "hand",
+                    "extrinsic": {
+                        "hand": []
+                    }
+                }
+            },
+            "scan_buffer": {
+                "stem1": {
+                    "tomato1": [["camera", "sizeof", "bounding", "box"], 
+                                ["mobile", "coordinates"], 
+                                ["6", "joint", "state", "of", "mani", "pulator"]],
+                    "tomato2": [["camera", "sizeof", "bounding", "box"], 
+                                ["mobile", "coordinates"], 
+                                ["6", "joint", "state", "of", "mani", "pulator"]]
+                }, 
+                "stem2": {},
+                "stem3": {}
+            }
+
+        },
+        "robot2" :{}
+    },
+    "user": {
+        "name": "Changmin",
+        "age": 60,
+        "expert": false,
+        "note": {},
+        "preference": {}
+    },
+    "task": {
+        "task_rules": {
+            "1":"tomatoes are initially unknown and must be discovered by scanning stems.",
+            "2":"unripe tomatoes should not be harvested.",
+            "3":"rottenness of the fruit must be scanned just after harvesting.",
+            "4":"robots must use a basket to collect tomatoes.",
+            "5":"robots must place the basket on the cargo before harvesting.",
+            "6":"robots and baskets must return to their initial locations after harvesting."
+        },
+        "available_objectives": {
+            "1": "harvest all tomatos",
+            "2": "pick up basket",
+            "3": "find somthing"
+        },
+        "planning_strategy": {
+            "constraints": {
+                "1": "Balanced workloads across robots.",
+                "2": "Logical dependencies are maintained.",
+                "3": "Minimal unnecessary travel between locations.",
+                "4": "Use the given available actions only.",
+                "5": "One object, one holding"
+            },
+            "template": {
+                "Robot ID": ["robot_id"],
+                "Plan": ["List of atomic actions in following format: # hierarchical numbering for control. a grounded action | What robot holding after the action"],
+                "Statement": {
+                    "For each": "looping each objects",
+                    "If": "condition"
+                }
+            },
+            "reasoning_method": "Chanin of Thought"
+        }
+    }
+}
